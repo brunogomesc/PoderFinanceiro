@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoderFinanceiro.Server", "PoderFinanceiro\Server\PoderFinanceiro.Server.csproj", "{22A29352-FD18-4C47-B95C-40D7A2616DF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoderFinanceiro.Server", "PoderFinanceiro\Server\PoderFinanceiro.Server.csproj", "{22A29352-FD18-4C47-B95C-40D7A2616DF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoderFinanceiro.Client", "PoderFinanceiro\Client\PoderFinanceiro.Client.csproj", "{9E76E793-5D2D-4B3F-99B2-B30345448B5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoderFinanceiro.Client", "PoderFinanceiro\Client\PoderFinanceiro.Client.csproj", "{9E76E793-5D2D-4B3F-99B2-B30345448B5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PoderFinanceiro.Shared", "PoderFinanceiro\Shared\PoderFinanceiro.Shared.csproj", "{AEAFE922-7C99-46FD-9245-122A06458810}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PoderFinanceiro.Shared", "PoderFinanceiro\Shared\PoderFinanceiro.Shared.csproj", "{AEAFE922-7C99-46FD-9245-122A06458810}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
