@@ -1,6 +1,8 @@
 ﻿@page "/fetchdata"
 @using PoderFinanceiro.Shared
 @inject HttpClient Http
+@using Microsoft.AspNetCore.Authorization;
+@attribute [Authorize(Roles = "Administrator")]
 
 <PageTitle>Weather forecast</PageTitle>
 
