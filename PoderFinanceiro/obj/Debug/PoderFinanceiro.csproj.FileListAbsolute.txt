@@ -1,0 +1,12 @@
+D:\dev\PoderFinanceiro\PoderFinanceiro\bin\Debug\PoderFinanceiro.exe.config
+D:\dev\PoderFinanceiro\PoderFinanceiro\bin\Debug\PoderFinanceiro.exe
+D:\dev\PoderFinanceiro\PoderFinanceiro\bin\Debug\PoderFinanceiro.pdb
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.csproj.AssemblyReference.cache
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.csproj.SuggestedBindingRedirects.cache
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Form1.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Properties.Resources.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.csproj.GenerateResource.cache
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.csproj.CoreCompileInputs.cache
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.exe
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.pdb
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.Homepage.resources
