@@ -12,3 +12,5 @@ D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.FormAdd
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Login.resources
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.FormAddEarnings.resources
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.HomepageContainer.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.HomepageContent.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.FormAddCategory.resources

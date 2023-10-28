@@ -1,6 +1,6 @@
 ﻿namespace PoderFinanceiro.Screens
 {
-    partial class HomepageContent
+    partial class FormAddExpense
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FormAddExpense
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "HomepageContent";
+            this.ClientSize = new System.Drawing.Size(523, 300);
+            this.ControlBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormAddExpense";
+            this.Text = "FormAddExpense";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -51,7 +51,7 @@
             this.txbLogin.Name = "txbLogin";
             this.txbLogin.Size = new System.Drawing.Size(100, 20);
             this.txbLogin.TabIndex = 1;
-            this.txbLogin.Leave += new System.EventHandler(this.txbLogin_Leave);
+            this.txbLogin.Leave += new System.EventHandler(this.TxbLogin_Leave);
             // 
             // lblPassword
             // 
@@ -70,7 +70,7 @@
             this.txbPassword.PasswordChar = '*';
             this.txbPassword.Size = new System.Drawing.Size(100, 20);
             this.txbPassword.TabIndex = 3;
-            this.txbPassword.Leave += new System.EventHandler(this.txbPassword_Leave);
+            this.txbPassword.Leave += new System.EventHandler(this.TxbPassword_Leave);
             // 
             // btnAccess
             // 

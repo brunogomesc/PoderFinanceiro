@@ -19,7 +19,7 @@ namespace PoderFinanceiro
             InitializeComponent();
         }
 
-        #region Validate user
+        #region Validate user (BtnAccess_Click)
         private void BtnAccess_Click(object sender, EventArgs e)
         {
 
@@ -47,10 +47,10 @@ namespace PoderFinanceiro
             }
 
         }
-        #endregion
+        #endregion ()
 
-        #region Validates filling in the login field
-        private void txbLogin_Leave(object sender, EventArgs e)
+        #region Validates filling in the login field (TxbLogin_Leave)
+        private void TxbLogin_Leave(object sender, EventArgs e)
         {
             string username = txbLogin.Text.ToString();
 
@@ -65,8 +65,8 @@ namespace PoderFinanceiro
         }
         #endregion
 
-        #region Validates filling in the password field
-        private void txbPassword_Leave(object sender, EventArgs e)
+        #region Validates filling in the password field (TxbPassword_Leave)
+        private void TxbPassword_Leave(object sender, EventArgs e)
         {
 
             string password = txbPassword.Text.ToString();
