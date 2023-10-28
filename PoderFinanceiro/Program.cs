@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PoderFinanceiro.Screens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,15 @@ namespace PoderFinanceiro
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            //
+            Login login = new Login();
+
+            if(login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new HomepageContainer());
+            }
+
         }
     }
 }

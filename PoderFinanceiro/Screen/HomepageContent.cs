@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace PoderFinanceiro.Screens
 {
-    public partial class Homepage : Form
+    public partial class HomepageContent : Form
     {
-        public Homepage()
+        public HomepageContent()
         {
             InitializeComponent();
         }
-
     }
 }

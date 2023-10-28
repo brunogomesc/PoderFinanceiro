@@ -46,23 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Screens\Form1.cs">
+    <Compile Include="Screen\FormAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Screen\FormAddCategory.Designer.cs">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screens\Homepage.cs">
+    <Compile Include="Screen\FormAddEarnings.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Homepage.Designer.cs">
-      <DependentUpon>Homepage.cs</DependentUpon>
+    <Compile Include="Screen\FormAddEarnings.Designer.cs">
+      <DependentUpon>FormAddEarnings.cs</DependentUpon>
     </Compile>
-    <Compile Include="Services\Authentication.cs" />
-    <EmbeddedResource Include="Screens\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Screen\FormAddExpense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\FormAddExpense.Designer.cs">
+      <DependentUpon>FormAddExpense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\HomepageContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\HomepageContainer.Designer.cs">
+      <DependentUpon>HomepageContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screen\HomepageContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\HomepageContent.Designer.cs">
+      <DependentUpon>HomepageContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\Authentication.cs" />
+    <Compile Include="Service\Icons.cs" />
+    <EmbeddedResource Include="Screen\FormAddCategory.resx">
+      <DependentUpon>FormAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\HomepageContent.resx">
+      <DependentUpon>HomepageContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,9 +103,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Screens\Homepage.resx">
-      <DependentUpon>Homepage.cs</DependentUpon>
+    <EmbeddedResource Include="Screen\FormAddEarnings.resx">
+      <DependentUpon>FormAddEarnings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\FormAddExpense.resx">
+      <DependentUpon>FormAddExpense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screen\HomepageContainer.resx">
+      <DependentUpon>HomepageContainer.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,6 +127,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet_minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wallet_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\categories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sub.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

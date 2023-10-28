@@ -3,10 +3,14 @@ D:\dev\PoderFinanceiro\PoderFinanceiro\bin\Debug\PoderFinanceiro.exe
 D:\dev\PoderFinanceiro\PoderFinanceiro\bin\Debug\PoderFinanceiro.pdb
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.csproj.AssemblyReference.cache
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.csproj.SuggestedBindingRedirects.cache
-D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Form1.resources
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Properties.Resources.resources
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.csproj.GenerateResource.cache
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.csproj.CoreCompileInputs.cache
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.exe
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.pdb
-D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.Homepage.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.FormAddExpense.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Login.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.FormAddEarnings.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.HomepageContainer.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.HomepageContent.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.FormAddCategory.resources
