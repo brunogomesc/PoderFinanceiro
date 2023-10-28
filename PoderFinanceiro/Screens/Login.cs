@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace PoderFinanceiro
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -41,9 +41,7 @@ namespace PoderFinanceiro
                 {
                     MessageBox.Show("Usuário autenticado com sucesso!", "Autenticação concluida", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    Homepage homepage = new Homepage();
-                    this.Hide();
-                    homepage.Show();
+                    DialogResult = DialogResult.OK;
 
                 }
             }
