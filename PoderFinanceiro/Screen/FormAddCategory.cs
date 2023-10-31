@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PoderFinanceiro.DataCommands.Category;
 
 namespace PoderFinanceiro.Screens
 {
@@ -51,6 +52,25 @@ namespace PoderFinanceiro.Screens
             lblErrorCategoryName.ForeColor = Color.Red;
             lblErrorCategoryName.Text = "Nome da categoria já existe!";
             lblErrorCategoryName.Visible = true;
+
+        }
+
+        private void BtnRegisterCategory_Click(object sender, EventArgs e)
+        {
+
+            string NameCategory = txbCategoryName.Text;
+            string NameIconCategory = lstViewIcon.SelectedItems.Count > 0 ? lstViewIcon.SelectedItems[0].Text : string.Empty;
+
+            if(String.IsNullOrEmpty(NameCategory))
+            {
+                MessageBox.Show("Nome da categoria não preenchido!", "Dados não preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(String.IsNullOrEmpty(NameIconCategory))
+            {
+                MessageBox.Show("Icone da categoria não selecionado", "Dados não preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            SaveCategory.Save();
 
         }
     }
