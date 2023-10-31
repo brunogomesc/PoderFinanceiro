@@ -101,6 +101,7 @@
             this.btnRegisterCategory.TabIndex = 5;
             this.btnRegisterCategory.Text = "Salvar Categoria";
             this.btnRegisterCategory.UseVisualStyleBackColor = true;
+            this.btnRegisterCategory.Click += new System.EventHandler(this.BtnRegisterCategory_Click);
             // 
             // lblErrorCategoryName
             // 

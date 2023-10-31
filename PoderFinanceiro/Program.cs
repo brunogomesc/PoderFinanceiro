@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PoderFinanceiro.Data;
 
 namespace PoderFinanceiro
 {
@@ -23,6 +24,7 @@ namespace PoderFinanceiro
 
             if(login.ShowDialog() == DialogResult.OK)
             {
+                DataAccess.CreateDatabaseSqlite();
                 Application.Run(new HomepageContainer());
             }
 
