@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomepageContainer));
             this.mnsMainMenu = new System.Windows.Forms.MenuStrip();
-            this.mniReport = new System.Windows.Forms.ToolStripMenuItem();
-            this.mniDashboard = new System.Windows.Forms.ToolStripMenuItem();
             this.mniAdd = new System.Windows.Forms.ToolStripMenuItem();
             this.smiAddExpense = new System.Windows.Forms.ToolStripMenuItem();
             this.smiAddEarnings = new System.Windows.Forms.ToolStripMenuItem();
             this.smiCategory = new System.Windows.Forms.ToolStripMenuItem();
             this.smiSubCategory = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniReport = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniDashboard = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniView = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,6 +45,7 @@
             // 
             this.mnsMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mniAdd,
+            this.mniView,
             this.mniReport,
             this.mniDashboard});
             this.mnsMainMenu.Location = new System.Drawing.Point(0, 0);
@@ -51,18 +53,6 @@
             this.mnsMainMenu.Size = new System.Drawing.Size(800, 24);
             this.mnsMainMenu.TabIndex = 2;
             this.mnsMainMenu.Text = "menuStrip1";
-            // 
-            // mniReport
-            // 
-            this.mniReport.Name = "mniReport";
-            this.mniReport.Size = new System.Drawing.Size(71, 20);
-            this.mniReport.Text = "Relatórios";
-            // 
-            // mniDashboard
-            // 
-            this.mniDashboard.Name = "mniDashboard";
-            this.mniDashboard.Size = new System.Drawing.Size(76, 20);
-            this.mniDashboard.Text = "Dashboard";
             // 
             // mniAdd
             // 
@@ -108,6 +98,24 @@
             this.smiSubCategory.Text = "Subcategorias";
             this.smiSubCategory.Click += new System.EventHandler(this.SmiSubCategory_Click);
             // 
+            // mniReport
+            // 
+            this.mniReport.Name = "mniReport";
+            this.mniReport.Size = new System.Drawing.Size(71, 20);
+            this.mniReport.Text = "Relatórios";
+            // 
+            // mniDashboard
+            // 
+            this.mniDashboard.Name = "mniDashboard";
+            this.mniDashboard.Size = new System.Drawing.Size(76, 20);
+            this.mniDashboard.Text = "Dashboard";
+            // 
+            // mniView
+            // 
+            this.mniView.Name = "mniView";
+            this.mniView.Size = new System.Drawing.Size(68, 20);
+            this.mniView.Text = "Visualizar";
+            // 
             // HomepageContainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,5 +145,6 @@
         private System.Windows.Forms.ToolStripMenuItem smiAddEarnings;
         private System.Windows.Forms.ToolStripMenuItem smiCategory;
         private System.Windows.Forms.ToolStripMenuItem smiSubCategory;
+        private System.Windows.Forms.ToolStripMenuItem mniView;
     }
 }
