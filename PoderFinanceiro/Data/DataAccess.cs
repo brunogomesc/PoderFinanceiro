@@ -15,7 +15,7 @@ namespace PoderFinanceiro.Data
         private static SQLiteConnection _connection;
         private static string db = "PoderFinanceiroDB.sqlite";
 
-        private static SQLiteConnection DbConnection()
+        public static SQLiteConnection DbConnection()
         {
             _connection = new SQLiteConnection($"Data Source={Directory.GetCurrentDirectory()}\\{db}; Version=3;");
             _connection.Open();
@@ -26,7 +26,12 @@ namespace PoderFinanceiro.Data
         {
             try
             {
-                SQLiteConnection.CreateFile($"{Directory.GetCurrentDirectory()}\\{db}");
+
+                if(!File.Exists($"{Directory.GetCurrentDirectory()}\\{ db}"))
+                {
+                    SQLiteConnection.CreateFile($"{Directory.GetCurrentDirectory()}\\{db}");
+                }
+
             }
             catch
             {
