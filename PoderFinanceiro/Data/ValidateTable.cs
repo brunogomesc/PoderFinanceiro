@@ -28,5 +28,10 @@ namespace PoderFinanceiro.Data
             }
         }
 
+        public static void CreateTables()
+        {
+            CreateTableCategory();
+        }
+
     }
 }
