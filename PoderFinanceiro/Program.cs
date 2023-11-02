@@ -25,6 +25,7 @@ namespace PoderFinanceiro
             if(login.ShowDialog() == DialogResult.OK)
             {
                 DataAccess.CreateDatabaseSqlite();
+                ValidateTable.CreateTables();
                 Application.Run(new HomepageContainer());
             }
 

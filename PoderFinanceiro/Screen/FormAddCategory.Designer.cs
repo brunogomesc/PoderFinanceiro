@@ -32,10 +32,8 @@
             this.txbCategoryName = new System.Windows.Forms.TextBox();
             this.lblCategoryIcon = new System.Windows.Forms.Label();
             this.lstViewIcon = new System.Windows.Forms.ListView();
-            this.pbViewIcon = new System.Windows.Forms.PictureBox();
             this.btnRegisterCategory = new System.Windows.Forms.Button();
             this.lblErrorCategoryName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbViewIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCategoryName
@@ -80,22 +78,11 @@
             this.lstViewIcon.Size = new System.Drawing.Size(217, 135);
             this.lstViewIcon.TabIndex = 3;
             this.lstViewIcon.UseCompatibleStateImageBehavior = false;
-            this.lstViewIcon.SelectedIndexChanged += new System.EventHandler(this.LstViewIcon_SelectedIndexChanged);
-            // 
-            // pbViewIcon
-            // 
-            this.pbViewIcon.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pbViewIcon.Location = new System.Drawing.Point(336, 62);
-            this.pbViewIcon.Name = "pbViewIcon";
-            this.pbViewIcon.Size = new System.Drawing.Size(181, 174);
-            this.pbViewIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbViewIcon.TabIndex = 4;
-            this.pbViewIcon.TabStop = false;
             // 
             // btnRegisterCategory
             // 
             this.btnRegisterCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegisterCategory.Location = new System.Drawing.Point(336, 271);
+            this.btnRegisterCategory.Location = new System.Drawing.Point(320, 271);
             this.btnRegisterCategory.Name = "btnRegisterCategory";
             this.btnRegisterCategory.Size = new System.Drawing.Size(181, 48);
             this.btnRegisterCategory.TabIndex = 5;
@@ -125,7 +112,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.lblErrorCategoryName);
             this.Controls.Add(this.btnRegisterCategory);
-            this.Controls.Add(this.pbViewIcon);
             this.Controls.Add(this.lstViewIcon);
             this.Controls.Add(this.lblCategoryIcon);
             this.Controls.Add(this.txbCategoryName);
@@ -134,7 +120,6 @@
             this.Name = "FormAddCategory";
             this.Text = "FormAddCategory";
             this.Load += new System.EventHandler(this.FormAddCategory_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbViewIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +131,6 @@
         private System.Windows.Forms.TextBox txbCategoryName;
         private System.Windows.Forms.Label lblCategoryIcon;
         private System.Windows.Forms.ListView lstViewIcon;
-        private System.Windows.Forms.PictureBox pbViewIcon;
         private System.Windows.Forms.Button btnRegisterCategory;
         private System.Windows.Forms.Label lblErrorCategoryName;
     }

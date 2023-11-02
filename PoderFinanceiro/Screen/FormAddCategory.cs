@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PoderFinanceiro.DataCommands;
 using PoderFinanceiro.Model;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.IO;
+using PoderFinanceiro.Properties;
 
 namespace PoderFinanceiro.Screens
 {
@@ -46,11 +49,6 @@ namespace PoderFinanceiro.Screens
             _categories = new List<Model.Category>();
             _categories = Categories.GetAllCategories();
 
-        }
-
-        private void LstViewIcon_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            pbViewIcon.Image = Properties.Resources.wallet_add;
         }
 
         private void TxbCategoryName_Leave(object sender, EventArgs e)
