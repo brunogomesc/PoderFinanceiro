@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PoderFinanceiro.DataCommands;
 using PoderFinanceiro.Model;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.IO;
 using PoderFinanceiro.Properties;
 
