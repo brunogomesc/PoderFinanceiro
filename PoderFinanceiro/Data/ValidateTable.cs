@@ -12,7 +12,7 @@ namespace PoderFinanceiro.Data
     public class ValidateTable
     {
 
-        public static void CreateTableCategory()
+        private static void CreateTableCategory()
         {
             try
             {
@@ -28,9 +28,26 @@ namespace PoderFinanceiro.Data
             }
         }
 
+        private static void CreateTableSubCategory()
+        {
+            try
+            {
+                using (var cmd = DataAccess.DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS subcategory(id UNIQUEIDENTIFIER NOT NULL, IdCategory UNIQUEIDENTIFIER NOT NULL, NameSubCategory Varchar(50), NameIconSubCategory Varchar(80), CreatedAt Datetime, UpdatedAt Datetime)";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public static void CreateTables()
         {
             CreateTableCategory();
+            CreateTableSubCategory();
         }
 
     }

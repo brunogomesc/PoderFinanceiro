@@ -82,9 +82,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataCommands\Category.cs" />
+    <Compile Include="DataCommands\SubCategory.cs" />
     <Compile Include="Data\DataAccess.cs" />
     <Compile Include="Data\ValidateTable.cs" />
     <Compile Include="Model\Category.cs" />
+    <Compile Include="Model\SubCategory.cs" />
     <Compile Include="Screen\FormAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +134,7 @@
     <Compile Include="Service\Authentication.cs" />
     <Compile Include="Service\Categories.cs" />
     <Compile Include="Service\Icons.cs" />
+    <Compile Include="Service\SubCategories.cs" />
     <Compile Include="Utils\Converter.cs" />
     <EmbeddedResource Include="Screen\FormAddCategory.resx">
       <DependentUpon>FormAddCategory.cs</DependentUpon>

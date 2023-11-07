@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PoderFinanceiro.Screen;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -90,6 +91,16 @@ namespace PoderFinanceiro.Screens
         #region Render Add SubCategory content (SmiSubCategory_Click)
         private void SmiSubCategory_Click(object sender, EventArgs e)
         {
+
+            FormAddSubCategory formAddSubCategory = new FormAddSubCategory();
+
+            formAddSubCategory.Text = "Adicionar Sub Categoria";
+
+            formAddSubCategory.StartPosition = FormStartPosition.CenterScreen;
+
+            formAddSubCategory.MdiParent = this;
+
+            formAddSubCategory.Show();
 
         }
         #endregion
