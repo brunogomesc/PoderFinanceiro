@@ -23,7 +23,6 @@ namespace PoderFinanceiro.Service
             category.CreatedAt = DateTime.Now;
             category.UpdatedAt = DateTime.Now;
 
-            ValidateTable.CreateTableCategory();
             DataCommands.Category.SaveCategory(category);
 
         }
