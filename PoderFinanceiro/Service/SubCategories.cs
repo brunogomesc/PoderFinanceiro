@@ -12,11 +12,12 @@ namespace PoderFinanceiro.Service
     public class SubCategories
     {
 
-        public static void SaveCategory(string nameSubCategory, string nameIconSubCatregory)
+        public static void SaveCategory(string nameSubCategory, string nameIconSubCatregory, Guid idCategory)
         {
             SubCategory subcategory = new SubCategory();
 
             subcategory.Id = Guid.NewGuid();
+            subcategory.IdCategory = idCategory;
             subcategory.NameSubCategory = nameSubCategory;
             subcategory.NameIconSubCategory = nameIconSubCatregory;
             subcategory.CreatedAt = DateTime.Now;
@@ -31,7 +32,7 @@ namespace PoderFinanceiro.Service
             DataTable categoriesDt = new DataTable();
             List<SubCategory> categories = new List<SubCategory>();
 
-            categoriesDt = DataCommands.Category.GetAllCategories();
+            categoriesDt = DataCommands.SubCategory.GetAllSubCategories();
 
             categories = Converter.ConvertToList<SubCategory>(categoriesDt);
 

@@ -64,5 +64,55 @@ namespace PoderFinanceiro.Screen
 
         }
 
+        private void BtnRegisterSubCategory_Click(object sender, EventArgs e)
+        {
+            string NameSubCategory = txbSubCategoryName.Text;
+            string NameIconSubCategory = lstViewIcon.SelectedItems.Count > 0 ? lstViewIcon.SelectedItems[0].Text : string.Empty;
+            string CategorySelected = lstCategories.SelectedItems.Count > 0 ? lstCategories.SelectedItems[0].ToString() : string.Empty;
+
+            if (String.IsNullOrEmpty(NameSubCategory))
+                MessageBox.Show("Nome da categoria não preenchido!", "Dados não preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            else if (String.IsNullOrEmpty(NameIconSubCategory))
+                MessageBox.Show("Icone da categoria não selecionado", "Dados não preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            else if (String.IsNullOrEmpty(CategorySelected))
+                MessageBox.Show("Categoria não selecionada", "Dados não preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            else
+            {
+
+                Guid idCategory = _categories.Where(c => c.NameCategory == CategorySelected).Select(i => i.Id).First();
+
+                SubCategories.SaveCategory(NameSubCategory, NameIconSubCategory, idCategory);
+                MessageBox.Show("Categoria criada com sucesso!", "Informação salva com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            GoToHomepage();
+        }
+
+        private void TxbSubCategoryName_Leave(object sender, EventArgs e)
+        {
+
+            string SubCategoryName = txbSubCategoryName.Text;
+
+            if (_subCategories.Where(scn => scn.NameSubCategory == SubCategoryName).Count() > 0)
+            {
+                lblErrorSubCategoryName.ForeColor = Color.Red;
+                lblErrorSubCategoryName.Text = "Nome da Sub categoria já existe!";
+                lblErrorSubCategoryName.Visible = true;
+            }
+            else
+            {
+                lblErrorSubCategoryName.ForeColor = Color.Black;
+                lblErrorSubCategoryName.Visible = false;
+            }
+
+        }
+
+        private void GoToHomepage()
+        {
+            this.Dispose();
+        }
     }
 }
