@@ -28,38 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblErrorCategoryName = new System.Windows.Forms.Label();
-            this.txbCategoryName = new System.Windows.Forms.TextBox();
+            this.lblErrorSubCategoryName = new System.Windows.Forms.Label();
+            this.txbSubCategoryName = new System.Windows.Forms.TextBox();
             this.lblSubCategoryName = new System.Windows.Forms.Label();
             this.lblListCategoryName = new System.Windows.Forms.Label();
             this.lstCategories = new System.Windows.Forms.ListBox();
-            this.btnRegisterCategory = new System.Windows.Forms.Button();
+            this.btnRegisterSubCategory = new System.Windows.Forms.Button();
             this.lblSubCategoryIcon = new System.Windows.Forms.Label();
             this.lstViewIcon = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // lblErrorCategoryName
+            // lblErrorSubCategoryName
             // 
-            this.lblErrorCategoryName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblErrorCategoryName.AutoSize = true;
-            this.lblErrorCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline);
-            this.lblErrorCategoryName.ForeColor = System.Drawing.Color.Red;
-            this.lblErrorCategoryName.Location = new System.Drawing.Point(331, 77);
-            this.lblErrorCategoryName.Margin = new System.Windows.Forms.Padding(3, 50, 3, 0);
-            this.lblErrorCategoryName.Name = "lblErrorCategoryName";
-            this.lblErrorCategoryName.Size = new System.Drawing.Size(29, 13);
-            this.lblErrorCategoryName.TabIndex = 11;
-            this.lblErrorCategoryName.Text = "Error";
-            this.lblErrorCategoryName.Visible = false;
+            this.lblErrorSubCategoryName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblErrorSubCategoryName.AutoSize = true;
+            this.lblErrorSubCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Underline);
+            this.lblErrorSubCategoryName.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorSubCategoryName.Location = new System.Drawing.Point(331, 77);
+            this.lblErrorSubCategoryName.Margin = new System.Windows.Forms.Padding(3, 50, 3, 0);
+            this.lblErrorSubCategoryName.Name = "lblErrorSubCategoryName";
+            this.lblErrorSubCategoryName.Size = new System.Drawing.Size(29, 13);
+            this.lblErrorSubCategoryName.TabIndex = 11;
+            this.lblErrorSubCategoryName.Text = "Error";
+            this.lblErrorSubCategoryName.Visible = false;
             // 
-            // txbCategoryName
+            // txbSubCategoryName
             // 
-            this.txbCategoryName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txbCategoryName.Location = new System.Drawing.Point(318, 97);
-            this.txbCategoryName.Name = "txbCategoryName";
-            this.txbCategoryName.Size = new System.Drawing.Size(217, 30);
-            this.txbCategoryName.TabIndex = 8;
+            this.txbSubCategoryName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbSubCategoryName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.txbSubCategoryName.Location = new System.Drawing.Point(318, 97);
+            this.txbSubCategoryName.Name = "txbSubCategoryName";
+            this.txbSubCategoryName.Size = new System.Drawing.Size(217, 30);
+            this.txbSubCategoryName.TabIndex = 8;
+            this.txbSubCategoryName.Leave += new System.EventHandler(this.TxbSubCategoryName_Leave);
             // 
             // lblSubCategoryName
             // 
@@ -94,15 +95,16 @@
             this.lstCategories.Size = new System.Drawing.Size(217, 69);
             this.lstCategories.TabIndex = 13;
             // 
-            // btnRegisterCategory
+            // btnRegisterSubCategory
             // 
-            this.btnRegisterCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegisterCategory.Location = new System.Drawing.Point(327, 241);
-            this.btnRegisterCategory.Name = "btnRegisterCategory";
-            this.btnRegisterCategory.Size = new System.Drawing.Size(181, 48);
-            this.btnRegisterCategory.TabIndex = 14;
-            this.btnRegisterCategory.Text = "Salvar Categoria";
-            this.btnRegisterCategory.UseVisualStyleBackColor = true;
+            this.btnRegisterSubCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnRegisterSubCategory.Location = new System.Drawing.Point(327, 241);
+            this.btnRegisterSubCategory.Name = "btnRegisterSubCategory";
+            this.btnRegisterSubCategory.Size = new System.Drawing.Size(181, 48);
+            this.btnRegisterSubCategory.TabIndex = 14;
+            this.btnRegisterSubCategory.Text = "Salvar Categoria";
+            this.btnRegisterSubCategory.UseVisualStyleBackColor = true;
+            this.btnRegisterSubCategory.Click += new System.EventHandler(this.BtnRegisterSubCategory_Click);
             // 
             // lblSubCategoryIcon
             // 
@@ -131,13 +133,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(561, 359);
             this.ControlBox = false;
-            this.Controls.Add(this.btnRegisterCategory);
+            this.Controls.Add(this.btnRegisterSubCategory);
             this.Controls.Add(this.lstCategories);
             this.Controls.Add(this.lblListCategoryName);
-            this.Controls.Add(this.lblErrorCategoryName);
+            this.Controls.Add(this.lblErrorSubCategoryName);
             this.Controls.Add(this.lstViewIcon);
             this.Controls.Add(this.lblSubCategoryIcon);
-            this.Controls.Add(this.txbCategoryName);
+            this.Controls.Add(this.txbSubCategoryName);
             this.Controls.Add(this.lblSubCategoryName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAddSubCategory";
@@ -150,12 +152,12 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblErrorCategoryName;
-        private System.Windows.Forms.TextBox txbCategoryName;
+        private System.Windows.Forms.Label lblErrorSubCategoryName;
+        private System.Windows.Forms.TextBox txbSubCategoryName;
         private System.Windows.Forms.Label lblSubCategoryName;
         private System.Windows.Forms.Label lblListCategoryName;
         private System.Windows.Forms.ListBox lstCategories;
-        private System.Windows.Forms.Button btnRegisterCategory;
+        private System.Windows.Forms.Button btnRegisterSubCategory;
         private System.Windows.Forms.Label lblSubCategoryIcon;
         private System.Windows.Forms.ListView lstViewIcon;
     }

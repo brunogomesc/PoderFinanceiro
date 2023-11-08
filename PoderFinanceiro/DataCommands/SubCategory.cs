@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PoderFinanceiro.Model;
 
 namespace PoderFinanceiro.DataCommands
 {
@@ -18,13 +19,14 @@ namespace PoderFinanceiro.DataCommands
             {
                 using (var cmd = DataAccess.DbConnection().CreateCommand())
                 {
-                    cmd.CommandText = "INSERT INTO category(id, NameCategory, NameIconCategory, CreatedAt, UpdatedAt ) " +
-                        "values (@id, @nameCategory, @nameIconCategory, @createdAt, @updatedAt)";
-                    cmd.Parameters.AddWithValue("@id", category.Id);
-                    cmd.Parameters.AddWithValue("@nameCategory", category.NameCategory);
-                    cmd.Parameters.AddWithValue("@nameIconCategory", category.NameIconCategory);
-                    cmd.Parameters.AddWithValue("@createdAt", category.CreatedAt);
-                    cmd.Parameters.AddWithValue("@updatedAt", category.UpdatedAt);
+                    cmd.CommandText = "INSERT INTO subcategory(id, IdCategory, NameSubCategory, NameIconSubCategory, CreatedAt, UpdatedAt) " +
+                        "values (@id, @idCategory, @nameSubCategory, @nameIconSubCategory, @createdAt, @updatedAt)";
+                    cmd.Parameters.AddWithValue("@id", subcategory.Id);
+                    cmd.Parameters.AddWithValue("@idCategory", subcategory.IdCategory);
+                    cmd.Parameters.AddWithValue("@nameSubCategory", subcategory.NameSubCategory);
+                    cmd.Parameters.AddWithValue("@nameIconSubCategory", subcategory.NameIconSubCategory);
+                    cmd.Parameters.AddWithValue("@createdAt", subcategory.CreatedAt);
+                    cmd.Parameters.AddWithValue("@updatedAt", subcategory.UpdatedAt);
                     cmd.ExecuteNonQuery();
                 }
             }
