@@ -1,4 +1,4 @@
-# Nome do projeto
+# Poder Financeiro
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/brunogomesc/PoderFinanceiro?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/brunogomesc/PoderFinanceiro?style=for-the-badge)
@@ -8,29 +8,28 @@
 
 <img src="imagem.png" alt="Exemplo imagem">
 
-> Linha adicional de texto informativo sobre o que o projeto faz. Sua introdução deve ter cerca de 2 ou 3 linhas. Não exagere, as pessoas não vão ler.
+> Projeto desktop para gestão de controle financeiro, permitindo cadastrar e gerenciar os gastos. Além de permitir extrair e visualizar relatório das tendências de gastos.
 
 ### Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
-- [x] Tarefa 1
-- [x] Tarefa 2
-- [x] Tarefa 3
-- [ ] Tarefa 4
-- [ ] Tarefa 5
+- [x] Criação de categorias e subcategorias
+- [ ] Criação do processo de inserção de ganhos e despesas
+- [ ] Visualização de categorias e subcategorias
+- [ ] Visualização de gastos e despesas (com possibilidade de filtros)
 
 ## 💻 Pré-requisitos
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-- Você instalou a versão mais recente de `<linguagem / dependência / requeridos>`
-- Você tem uma máquina `<Windows / Linux / Mac>`. Indique qual sistema operacional é compatível / não compatível.
-- Você leu `<guia / link / documentação_relacionada_ao_projeto>`.
+- Você instalou a versão mais recente do .Net Framework
+- Compatível com todos os sistemas operacionais.
+- Será necessário ler o README.md do projeto.
 
-## 🚀 Instalando <nome_do_projeto>
+## 🚀 Instalando Poder Financeiro
 
-Para instalar o <nome_do_projeto>, siga estas etapas:
+Para instalar o Poder Financeiro, siga estas etapas:
 
 Linux e macOS:
 
@@ -44,9 +43,9 @@ Windows:
 <comando_de_instalação>
 ```
 
-## ☕ Usando <nome_do_projeto>
+## ☕ Usando Poder Financeiro
 
-Para usar <nome_do_projeto>, siga estas etapas:
+Para usar Poder Financeiro, siga estas etapas:
 
 ```
 <exemplo_de_uso>
