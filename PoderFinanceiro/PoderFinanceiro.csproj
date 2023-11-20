@@ -135,6 +135,7 @@
     <Compile Include="Service\Categories.cs" />
     <Compile Include="Service\Icons.cs" />
     <Compile Include="Service\SubCategories.cs" />
+    <Compile Include="Utils\Clear.cs" />
     <Compile Include="Utils\Converter.cs" />
     <EmbeddedResource Include="Screen\FormAddCategory.resx">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
