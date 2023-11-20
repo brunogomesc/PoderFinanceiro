@@ -34,14 +34,13 @@
             this.lblListSubCategoriesName = new System.Windows.Forms.Label();
             this.txbEarningName = new System.Windows.Forms.TextBox();
             this.lblEarningName = new System.Windows.Forms.Label();
-            this.txbValue = new System.Windows.Forms.TextBox();
             this.lblValue = new System.Windows.Forms.Label();
             this.mdcDataEarning = new System.Windows.Forms.MonthCalendar();
             this.txbObservation = new System.Windows.Forms.TextBox();
             this.lblObservation = new System.Windows.Forms.Label();
             this.gpbOptions = new System.Windows.Forms.GroupBox();
-            this.chbRecorrente = new System.Windows.Forms.CheckBox();
             this.chbUnique = new System.Windows.Forms.CheckBox();
+            this.chbRecorrente = new System.Windows.Forms.CheckBox();
             this.btnSaveEarning = new System.Windows.Forms.Button();
             this.lblErrorEarning = new System.Windows.Forms.Label();
             this.lblErrorValue = new System.Windows.Forms.Label();
@@ -49,6 +48,7 @@
             this.lblErrorTypeEarning = new System.Windows.Forms.Label();
             this.lblErrorCategories = new System.Windows.Forms.Label();
             this.lblSubCategories = new System.Windows.Forms.Label();
+            this.mtbValue = new System.Windows.Forms.MaskedTextBox();
             this.gpbOptions.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,6 +102,7 @@
             this.txbEarningName.Name = "txbEarningName";
             this.txbEarningName.Size = new System.Drawing.Size(217, 30);
             this.txbEarningName.TabIndex = 19;
+            this.txbEarningName.Leave += new System.EventHandler(this.TxbEarningName_Leave);
             // 
             // lblEarningName
             // 
@@ -114,15 +115,6 @@
             this.lblEarningName.Size = new System.Drawing.Size(61, 17);
             this.lblEarningName.TabIndex = 18;
             this.lblEarningName.Text = "Ganho:";
-            // 
-            // txbValue
-            // 
-            this.txbValue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.txbValue.Location = new System.Drawing.Point(296, 194);
-            this.txbValue.Name = "txbValue";
-            this.txbValue.Size = new System.Drawing.Size(126, 30);
-            this.txbValue.TabIndex = 21;
             // 
             // lblValue
             // 
@@ -140,8 +132,10 @@
             // 
             this.mdcDataEarning.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mdcDataEarning.Location = new System.Drawing.Point(608, 198);
+            this.mdcDataEarning.MaxSelectionCount = 1;
             this.mdcDataEarning.Name = "mdcDataEarning";
             this.mdcDataEarning.TabIndex = 23;
+            this.mdcDataEarning.TodayDate = new System.DateTime(2023, 11, 20, 0, 0, 0, 0);
             // 
             // txbObservation
             // 
@@ -177,16 +171,6 @@
             this.gpbOptions.TabStop = false;
             this.gpbOptions.Text = "Tipo Recebimento";
             // 
-            // chbRecorrente
-            // 
-            this.chbRecorrente.AutoSize = true;
-            this.chbRecorrente.Location = new System.Drawing.Point(7, 20);
-            this.chbRecorrente.Name = "chbRecorrente";
-            this.chbRecorrente.Size = new System.Drawing.Size(79, 17);
-            this.chbRecorrente.TabIndex = 0;
-            this.chbRecorrente.Text = "Recorrente";
-            this.chbRecorrente.UseVisualStyleBackColor = true;
-            // 
             // chbUnique
             // 
             this.chbUnique.AutoSize = true;
@@ -196,6 +180,18 @@
             this.chbUnique.TabIndex = 28;
             this.chbUnique.Text = "Unico";
             this.chbUnique.UseVisualStyleBackColor = true;
+            this.chbUnique.CheckedChanged += new System.EventHandler(this.ChbUnique_CheckedChanged);
+            // 
+            // chbRecorrente
+            // 
+            this.chbRecorrente.AutoSize = true;
+            this.chbRecorrente.Location = new System.Drawing.Point(7, 20);
+            this.chbRecorrente.Name = "chbRecorrente";
+            this.chbRecorrente.Size = new System.Drawing.Size(79, 17);
+            this.chbRecorrente.TabIndex = 0;
+            this.chbRecorrente.Text = "Recorrente";
+            this.chbRecorrente.UseVisualStyleBackColor = true;
+            this.chbRecorrente.CheckedChanged += new System.EventHandler(this.ChbRecorrente_CheckedChanged);
             // 
             // btnSaveEarning
             // 
@@ -206,6 +202,7 @@
             this.btnSaveEarning.TabIndex = 27;
             this.btnSaveEarning.Text = "Salvar";
             this.btnSaveEarning.UseVisualStyleBackColor = true;
+            this.btnSaveEarning.Click += new System.EventHandler(this.BtnSaveEarning_Click);
             // 
             // lblErrorEarning
             // 
@@ -217,6 +214,7 @@
             this.lblErrorEarning.Size = new System.Drawing.Size(29, 13);
             this.lblErrorEarning.TabIndex = 28;
             this.lblErrorEarning.Text = "Error";
+            this.lblErrorEarning.Visible = false;
             // 
             // lblErrorValue
             // 
@@ -228,6 +226,7 @@
             this.lblErrorValue.Size = new System.Drawing.Size(29, 13);
             this.lblErrorValue.TabIndex = 29;
             this.lblErrorValue.Text = "Error";
+            this.lblErrorValue.Visible = false;
             // 
             // lblErrorDate
             // 
@@ -239,6 +238,7 @@
             this.lblErrorDate.Size = new System.Drawing.Size(29, 13);
             this.lblErrorDate.TabIndex = 30;
             this.lblErrorDate.Text = "Error";
+            this.lblErrorDate.Visible = false;
             // 
             // lblErrorTypeEarning
             // 
@@ -250,6 +250,7 @@
             this.lblErrorTypeEarning.Size = new System.Drawing.Size(29, 13);
             this.lblErrorTypeEarning.TabIndex = 31;
             this.lblErrorTypeEarning.Text = "Error";
+            this.lblErrorTypeEarning.Visible = false;
             // 
             // lblErrorCategories
             // 
@@ -261,6 +262,7 @@
             this.lblErrorCategories.Size = new System.Drawing.Size(29, 13);
             this.lblErrorCategories.TabIndex = 32;
             this.lblErrorCategories.Text = "Error";
+            this.lblErrorCategories.Visible = false;
             // 
             // lblSubCategories
             // 
@@ -272,6 +274,18 @@
             this.lblSubCategories.Size = new System.Drawing.Size(29, 13);
             this.lblSubCategories.TabIndex = 33;
             this.lblSubCategories.Text = "Error";
+            this.lblSubCategories.Visible = false;
+            // 
+            // mtbValue
+            // 
+            this.mtbValue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtbValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.mtbValue.Location = new System.Drawing.Point(296, 195);
+            this.mtbValue.Mask = "$ 00000.00";
+            this.mtbValue.Name = "mtbValue";
+            this.mtbValue.Size = new System.Drawing.Size(126, 30);
+            this.mtbValue.TabIndex = 34;
+            this.mtbValue.Leave += new System.EventHandler(this.MtbValue_Leave);
             // 
             // FormAddEarnings
             // 
@@ -279,6 +293,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(901, 419);
             this.ControlBox = false;
+            this.Controls.Add(this.mtbValue);
             this.Controls.Add(this.lblSubCategories);
             this.Controls.Add(this.lblErrorCategories);
             this.Controls.Add(this.lblErrorTypeEarning);
@@ -290,7 +305,6 @@
             this.Controls.Add(this.txbObservation);
             this.Controls.Add(this.lblObservation);
             this.Controls.Add(this.mdcDataEarning);
-            this.Controls.Add(this.txbValue);
             this.Controls.Add(this.lblValue);
             this.Controls.Add(this.txbEarningName);
             this.Controls.Add(this.lblEarningName);
@@ -302,6 +316,7 @@
             this.Name = "FormAddEarnings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAddEarnings";
+            this.Load += new System.EventHandler(this.FormAddEarnings_Load);
             this.gpbOptions.ResumeLayout(false);
             this.gpbOptions.PerformLayout();
             this.ResumeLayout(false);
@@ -317,7 +332,6 @@
         private System.Windows.Forms.Label lblListSubCategoriesName;
         private System.Windows.Forms.TextBox txbEarningName;
         private System.Windows.Forms.Label lblEarningName;
-        private System.Windows.Forms.TextBox txbValue;
         private System.Windows.Forms.Label lblValue;
         private System.Windows.Forms.MonthCalendar mdcDataEarning;
         private System.Windows.Forms.TextBox txbObservation;
@@ -332,5 +346,6 @@
         private System.Windows.Forms.Label lblErrorTypeEarning;
         private System.Windows.Forms.Label lblErrorCategories;
         private System.Windows.Forms.Label lblSubCategories;
+        private System.Windows.Forms.MaskedTextBox mtbValue;
     }
 }
