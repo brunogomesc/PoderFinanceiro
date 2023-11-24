@@ -12,7 +12,7 @@ namespace PoderFinanceiro.Utils
         public static string ClearMaskValue(string value)
         {
 
-            string valueFormat = value.Replace("R$","").Replace(" ","");
+            string valueFormat = value.Replace("R","").Replace(" ","").Replace("$","");
 
             return valueFormat;
 

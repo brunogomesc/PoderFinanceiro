@@ -119,8 +119,10 @@ namespace PoderFinanceiro.Screens
             this.Dispose();
         }
 
-        private bool ValidateEarningType()
+        private bool ValidateSaveEarning()
         {
+
+            bool isValid = true;
 
             if(!chbRecorrente.Checked && !chbUnique.Checked)
             {
@@ -129,27 +131,88 @@ namespace PoderFinanceiro.Screens
                 lblErrorTypeEarning.ForeColor = Color.Red;
                 lblErrorTypeEarning.Visible = true;
 
-                return false;
+                isValid = false;
+
+            }
+            
+            if(Clear.ClearMaskValue(mtbValue.Text) == ".")
+            {
+
+                lblErrorValue.Text = "O valor do ganho não pode estar vazio";
+                lblErrorValue.ForeColor = Color.Red;
+                lblErrorValue.Visible = true;
+
+                isValid = false;
+
+
+            }
+            
+            if(txbEarningName.Text == "")
+            {
+
+                lblErrorEarning.Text = "Nome do ganho não pode estar vazio";
+                lblErrorEarning.ForeColor = Color.Red;
+                lblErrorEarning.Visible = true;
+
+                isValid = false;
 
             }
 
-            return true;
+            if(mdcDataEarning.SelectionEnd == null)
+            {
+
+                lblErrorDate.Text = "Data do ganho não pode estar vazia";
+                lblErrorDate.ForeColor = Color.Red;
+                lblErrorDate.Visible = true;
+
+                isValid = false;
+
+            }
+
+            if(lstCategories.SelectedIndex == -1)
+            {
+
+                lblErrorCategories.Text = "A categoria não foi selecionada";
+                lblErrorCategories.ForeColor = Color.Red;
+                lblErrorCategories.Visible = true;
+
+                isValid = false;
+
+            }
+
+            if(lstSubCategories.SelectedIndex == -1)
+            {
+
+                lblErrorSubCategories.Text = "A subcategoria não foi selecionada";
+                lblErrorSubCategories.ForeColor = Color.Red;
+                lblErrorSubCategories.Visible = true;
+
+                isValid = false;
+
+            }
+
+            return isValid;
 
         }
 
         private void BtnSaveEarning_Click(object sender, EventArgs e)
         {
 
-            bool validateEarningType = ValidateEarningType();
+            bool validateEarningType = ValidateSaveEarning();
 
-            if(!validateEarningType)
+            if(validateEarningType)
             {
+
+
+
+                GoToHomepage();
 
             }
             else
             {
 
-                GoToHomepage();
+                MessageBox.Show("Por favor verificar, pois existem campos que foram preenchidos incorretamente","Dados incorretos", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
             }
 
             

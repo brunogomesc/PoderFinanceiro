@@ -1,4 +1,6 @@
-﻿namespace PoderFinanceiro.Screens
+﻿using System;
+
+namespace PoderFinanceiro.Screens
 {
     partial class FormAddEarnings
     {
@@ -47,7 +49,7 @@
             this.lblErrorDate = new System.Windows.Forms.Label();
             this.lblErrorTypeEarning = new System.Windows.Forms.Label();
             this.lblErrorCategories = new System.Windows.Forms.Label();
-            this.lblSubCategories = new System.Windows.Forms.Label();
+            this.lblErrorSubCategories = new System.Windows.Forms.Label();
             this.mtbValue = new System.Windows.Forms.MaskedTextBox();
             this.gpbOptions.SuspendLayout();
             this.SuspendLayout();
@@ -135,7 +137,7 @@
             this.mdcDataEarning.MaxSelectionCount = 1;
             this.mdcDataEarning.Name = "mdcDataEarning";
             this.mdcDataEarning.TabIndex = 23;
-            this.mdcDataEarning.TodayDate = new System.DateTime(2023, 11, 20, 0, 0, 0, 0);
+            this.mdcDataEarning.TodayDate = new System.DateTime(2023, 11, 24, 0, 0, 0, 0);
             // 
             // txbObservation
             // 
@@ -264,24 +266,24 @@
             this.lblErrorCategories.Text = "Error";
             this.lblErrorCategories.Visible = false;
             // 
-            // lblSubCategories
+            // lblErrorSubCategories
             // 
-            this.lblSubCategories.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblSubCategories.AutoSize = true;
-            this.lblSubCategories.ForeColor = System.Drawing.Color.Red;
-            this.lblSubCategories.Location = new System.Drawing.Point(299, 37);
-            this.lblSubCategories.Name = "lblSubCategories";
-            this.lblSubCategories.Size = new System.Drawing.Size(29, 13);
-            this.lblSubCategories.TabIndex = 33;
-            this.lblSubCategories.Text = "Error";
-            this.lblSubCategories.Visible = false;
+            this.lblErrorSubCategories.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblErrorSubCategories.AutoSize = true;
+            this.lblErrorSubCategories.ForeColor = System.Drawing.Color.Red;
+            this.lblErrorSubCategories.Location = new System.Drawing.Point(299, 37);
+            this.lblErrorSubCategories.Name = "lblErrorSubCategories";
+            this.lblErrorSubCategories.Size = new System.Drawing.Size(29, 13);
+            this.lblErrorSubCategories.TabIndex = 33;
+            this.lblErrorSubCategories.Text = "Error";
+            this.lblErrorSubCategories.Visible = false;
             // 
             // mtbValue
             // 
             this.mtbValue.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mtbValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.mtbValue.Location = new System.Drawing.Point(296, 195);
-            this.mtbValue.Mask = "$ 00000.00";
+            this.mtbValue.Mask = "R$ 00000.00";
             this.mtbValue.Name = "mtbValue";
             this.mtbValue.Size = new System.Drawing.Size(126, 30);
             this.mtbValue.TabIndex = 34;
@@ -294,7 +296,7 @@
             this.ClientSize = new System.Drawing.Size(901, 419);
             this.ControlBox = false;
             this.Controls.Add(this.mtbValue);
-            this.Controls.Add(this.lblSubCategories);
+            this.Controls.Add(this.lblErrorSubCategories);
             this.Controls.Add(this.lblErrorCategories);
             this.Controls.Add(this.lblErrorTypeEarning);
             this.Controls.Add(this.lblErrorDate);
@@ -345,7 +347,7 @@
         private System.Windows.Forms.Label lblErrorDate;
         private System.Windows.Forms.Label lblErrorTypeEarning;
         private System.Windows.Forms.Label lblErrorCategories;
-        private System.Windows.Forms.Label lblSubCategories;
+        private System.Windows.Forms.Label lblErrorSubCategories;
         private System.Windows.Forms.MaskedTextBox mtbValue;
     }
 }
