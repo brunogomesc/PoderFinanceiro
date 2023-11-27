@@ -44,10 +44,27 @@ namespace PoderFinanceiro.Data
             }
         }
 
+        private static void CreateTableEarning()
+        {
+            try
+            {
+                using (var cmd = DataAccess.DbConnection().CreateCommand())
+                {
+                    cmd.CommandText = "CREATE TABLE IF NOT EXISTS earning(id UNIQUEIDENTIFIER NOT NULL, IdCategory UNIQUEIDENTIFIER NOT NULL, IdSubCategory UNIQUEIDENTIFIER NOT NULL, TypeEarning Varchar(50), Name Varchar(80), Value decimal, DateEarning Datetime, Observation Varchar(300), CreatedAt Datetime, UpdatedAt Datetime)";
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         public static void CreateTables()
         {
             CreateTableCategory();
             CreateTableSubCategory();
+            CreateTableEarning();
         }
 
     }
