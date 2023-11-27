@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PoderFinanceiro.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,17 +10,22 @@ namespace PoderFinanceiro.Service
     public class Earnings
     {
 
-        public static void SaveEarning(string nameCategory, string nameIconCatregory)
+        public static void SaveEarning(Guid categorySelected, Guid subCategorySelected, string typeEarning, string nameEarning, decimal valueEarning, DateTime earningDate, string observation)
         {
-            Ear category = new Category();
+            Earning earning = new Earning();
 
-            category.Id = Guid.NewGuid();
-            category.NameCategory = nameCategory;
-            category.NameIconCategory = nameIconCatregory;
-            category.CreatedAt = DateTime.Now;
-            category.UpdatedAt = DateTime.Now;
+            earning.Id = Guid.NewGuid();
+            earning.IdCategory = categorySelected;
+            earning.IdSubCategory = subCategorySelected;
+            earning.TypeEarning = typeEarning;
+            earning.Name = nameEarning;
+            earning.Value = valueEarning;
+            earning.DateEarning = earningDate;
+            earning.Observation = observation;
+            earning.CreatedAt = DateTime.Now;
+            earning.UpdatedAt = DateTime.Now;
 
-            DataCommands.Category.SaveCategory(category);
+            DataCommands.Earning.SaveEarning(earning);
 
         }
 

@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataCommands\Category.cs" />
+    <Compile Include="DataCommands\Earning.cs" />
     <Compile Include="DataCommands\SubCategory.cs" />
     <Compile Include="Data\DataAccess.cs" />
     <Compile Include="Data\ValidateTable.cs" />

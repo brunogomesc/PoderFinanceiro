@@ -98,7 +98,7 @@ namespace PoderFinanceiro.Screens
         private void MtbValue_Leave(object sender, EventArgs e)
         {
 
-            string value = Clear.ClearMaskValue(mtbValue.Text) == "," ? string.Empty : Clear.ClearMaskValue(mtbValue.Text);
+            string value = Clear.ClearMaskValue(mtbValue.Text) == "." ? string.Empty : Clear.ClearMaskValue(mtbValue.Text);
 
             if (string.IsNullOrEmpty(value))
             {
@@ -203,7 +203,18 @@ namespace PoderFinanceiro.Screens
             if(validateEarningType)
             {
 
+                string CategorySelected = lstCategories.SelectedItems.Count > 0 ? lstCategories.SelectedItems[0].ToString() : string.Empty;
+                string SubCategorySelected = lstSubCategories.SelectedItems.Count > 0 ? lstSubCategories.SelectedItems[0].ToString() : string.Empty;
+                string TypeEarning = chbRecorrente.Checked ? chbRecorrente.Text : chbUnique.Text;
+                string NameEarning = txbEarningName.Text;
+                decimal ValueEarning = Convert.ToDecimal(Clear.ClearMaskValue(mtbValue.Text));
+                DateTime EarningDate = mdcDataEarning.SelectionEnd;
+                string Observation = txbObservation.Text;
 
+                Guid idCategory = _categories.Where(c => c.NameCategory == CategorySelected).Select(i => i.Id).First();
+                Guid idSubCategory = _subCategories.Where(c => c.NameSubCategory == SubCategorySelected).Select(i => i.Id).First();
+
+                Earnings.SaveEarning(idCategory, idSubCategory, TypeEarning, NameEarning, ValueEarning, EarningDate, Observation);
 
                 GoToHomepage();
 
