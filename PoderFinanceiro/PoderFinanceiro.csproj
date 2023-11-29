@@ -83,11 +83,13 @@
   <ItemGroup>
     <Compile Include="DataCommands\Category.cs" />
     <Compile Include="DataCommands\Earning.cs" />
+    <Compile Include="DataCommands\Expense.cs" />
     <Compile Include="DataCommands\SubCategory.cs" />
     <Compile Include="Data\DataAccess.cs" />
     <Compile Include="Data\ValidateTable.cs" />
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Earning.cs" />
+    <Compile Include="Model\Expense.cs" />
     <Compile Include="Model\SubCategory.cs" />
     <Compile Include="Screen\FormAddCategory.cs">
       <SubType>Form</SubType>
@@ -136,6 +138,7 @@
     <Compile Include="Service\Authentication.cs" />
     <Compile Include="Service\Categories.cs" />
     <Compile Include="Service\Earnings.cs" />
+    <Compile Include="Service\Expenses.cs" />
     <Compile Include="Service\Icons.cs" />
     <Compile Include="Service\SubCategories.cs" />
     <Compile Include="Utils\Clear.cs" />
