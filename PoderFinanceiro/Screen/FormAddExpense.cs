@@ -255,6 +255,8 @@ namespace PoderFinanceiro.Screens
 
                 Expenses.SaveExpense(idCategory, idSubCategory, TypeExpense, QuantityInstallments, NameExpense, ValueExpense, ExpenseDate, Observation);
 
+                MessageBox.Show("Despesa cadastrada com sucesso!", "Informação salva com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 GoToHomepage();
 
             }

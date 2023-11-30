@@ -216,6 +216,8 @@ namespace PoderFinanceiro.Screens
 
                 Earnings.SaveEarning(idCategory, idSubCategory, TypeEarning, NameEarning, ValueEarning, EarningDate, Observation);
 
+                MessageBox.Show("Ganho cadastrado com sucesso!", "Informação salva com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 GoToHomepage();
 
             }

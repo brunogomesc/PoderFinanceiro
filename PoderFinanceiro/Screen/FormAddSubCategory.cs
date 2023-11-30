@@ -85,7 +85,7 @@ namespace PoderFinanceiro.Screen
                 Guid idCategory = _categories.Where(c => c.NameCategory == CategorySelected).Select(i => i.Id).First();
 
                 SubCategories.SaveCategory(NameSubCategory, NameIconSubCategory, idCategory);
-                MessageBox.Show("Categoria criada com sucesso!", "Informação salva com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Subcategoria criada com sucesso!", "Informação salva com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             GoToHomepage();
