@@ -236,9 +236,9 @@ namespace PoderFinanceiro.Screens
         private void BtnSaveExpense_Click(object sender, EventArgs e)
         {
 
-            bool validateEarningType = ValidateSaveExpense();
+            bool validateExpenseType = ValidateSaveExpense();
 
-            if (validateEarningType)
+            if (validateExpenseType)
             {
 
                 string CategorySelected = lstCategories.SelectedItems.Count > 0 ? lstCategories.SelectedItems[0].ToString() : string.Empty;
