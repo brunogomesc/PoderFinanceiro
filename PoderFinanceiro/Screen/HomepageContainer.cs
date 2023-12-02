@@ -107,5 +107,19 @@ namespace PoderFinanceiro.Screens
 
         #endregion
 
+        private void MniHome_Click(object sender, EventArgs e)
+        {
+
+            HomepageContent homepageContent = new HomepageContent();
+
+            homepageContent.Text = "Homepage";
+
+            homepageContent.WindowState = FormWindowState.Maximized;
+
+            homepageContent.MdiParent = this;
+
+            homepageContent.Show();
+
+        }
     }
 }
