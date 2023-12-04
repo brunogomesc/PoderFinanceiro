@@ -91,6 +91,12 @@
     <Compile Include="Model\Earning.cs" />
     <Compile Include="Model\Expense.cs" />
     <Compile Include="Model\SubCategory.cs" />
+    <Compile Include="Screen\ViewCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screen\ViewCategory.Designer.cs">
+      <DependentUpon>ViewCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screen\FormAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     <Compile Include="Service\SubCategories.cs" />
     <Compile Include="Utils\Clear.cs" />
     <Compile Include="Utils\Converter.cs" />
+    <EmbeddedResource Include="Screen\ViewCategory.resx">
+      <DependentUpon>ViewCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screen\FormAddCategory.resx">
       <DependentUpon>FormAddCategory.cs</DependentUpon>
     </EmbeddedResource>
