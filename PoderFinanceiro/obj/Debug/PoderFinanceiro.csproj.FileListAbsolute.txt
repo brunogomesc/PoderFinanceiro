@@ -32,3 +32,4 @@ D:\dev\PoderFinanceiro\PoderFinanceiro\bin\Debug\System.Numerics.Vectors.xml
 D:\dev\PoderFinanceiro\PoderFinanceiro\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.csproj.CopyComplete
 D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screen.FormAddSubCategory.resources
+D:\dev\PoderFinanceiro\PoderFinanceiro\obj\Debug\PoderFinanceiro.Screens.ViewCategory.resources

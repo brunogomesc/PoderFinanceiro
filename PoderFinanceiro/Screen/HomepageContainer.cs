@@ -105,8 +105,6 @@ namespace PoderFinanceiro.Screens
         }
         #endregion
 
-        #endregion
-
         private void MniHome_Click(object sender, EventArgs e)
         {
 
@@ -119,6 +117,23 @@ namespace PoderFinanceiro.Screens
             homepageContent.MdiParent = this;
 
             homepageContent.Show();
+
+        }
+
+        #endregion
+
+        private void SmiViewCategory_Click(object sender, EventArgs e)
+        {
+
+            ViewCategory viewCategory = new ViewCategory();
+
+            viewCategory.Text = "Visualizar Categorias";
+
+            viewCategory.StartPosition = FormStartPosition.CenterScreen;
+
+            viewCategory.MdiParent = this;
+
+            viewCategory.Show();
 
         }
     }
