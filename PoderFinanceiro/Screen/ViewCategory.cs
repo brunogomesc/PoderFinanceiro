@@ -25,5 +25,21 @@ namespace PoderFinanceiro.Screens
             InitializeComponent();
         }
 
+        private void ViewCategory_Load(object sender, EventArgs e)
+        {
+
+            LoadCategories();
+
+            dgvCategories.DataSource = _categories;
+
+        }
+
+        private void LoadCategories()
+        {
+
+            _categories = Categories.GetAllCategories();
+
+        }
+
     }
 }
